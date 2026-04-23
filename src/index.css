@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@layer base {
+  ::selection {
+    @apply bg-[#ffcc00] text-[#010a26];
+  }
+}
+
+/* Custom Scrollbar for Sarı Lacivert Theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #010a26;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #102677;
+  border-radius: 5px;
+  border: 2px solid #010a26;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffcc00;
+}
+
+@keyframes neon-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-neon-rotate {
+  animation: neon-rotate 8s linear infinite;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
